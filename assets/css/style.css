@@ -1,0 +1,83 @@
+/*		<div id="title"></div>
+		<div id="clear"></div>
+		<div id="hangman"></div>
+		<div id="content"></div>
+		<div id="clear"></div>
+		<div id="letters"></div>*/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    position: static;
+    height:100%;
+    width: 100%;
+    background-image: url("../images/concrete_seamless.png");
+    background-size: all;
+    background-attachment: scroll;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+#hangman{	
+	float: left;
+	height: 500px;
+	width: 50%;
+	background-color: blue;
+}
+
+#game{
+	display: inline;
+	float: left;
+	height: 500px;
+	width: 50%;
+}
+
+#content{
+	display: inline;
+	float: right;
+	height: 400px;
+	width: 100%;
+	background-color: yellow;
+}
+
+#letters{
+	display: inline;
+	float: left;
+	height: 100px;
+	width: 100%;
+	background-color: orange;
+}
+
+#hangman fieldset{
+	border: 1px solid;
+	padding: 200px;
+	margin: 20px;
+}
+#content fieldset{
+	border: 1px solid;
+	padding: 160px;
+	margin: 20px;
+}
+#letters fieldset{
+	border: 1px solid;
+	padding: 20px;
+	margin: 20px;
+}
+
+h1{
+	font-size: 36px;
+	padding: 20px;
+}
