@@ -54,13 +54,22 @@ body{
 	border-width:5px;	
     border-style:solid;
     border-top: none;
+    padding-top: 10px;
 }
 
-h1{
+h1#welcome{
 	font-size: 48px;
 	padding: 20px;
 	text-align: center;
 	color: #b48484;
+}
+
+h1#usedLetters{
+	text-align: center;
+}
+
+#arrLetters{
+	padding: 5px 100px 5px 100px;
 }
 
 #hangman{
