@@ -162,6 +162,8 @@
 		}
 
 		if (guesses == 0){
+			var snd = new Audio('../../assets/sounds/dead.mp3');
+			snd.play();
 			document.querySelector('#next').innerHTML = 'Game over, you lost!';
 			document.getElementById('submit').style.display = 'block';
 		}
