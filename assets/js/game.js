@@ -12,6 +12,7 @@
 	var myList = document.getElementById('letter');
 	var myListItem = "";
 	
+	
 	// initialize counters
 	var wins = 0;
 	var guesses = 6;
@@ -29,18 +30,6 @@
 		myListItem = document.createElement('li');
 		myList.appendChild(myListItem);
 	}
-
-	function createCookie(name,value,days) {
-	    if (days) {
-	        var date = new Date();
-	        date.setTime(date.getTime()+(days*24*60*60*1000));
-	        var expires = "; expires="+date.toGMTString();
-	    }
-	    else var expires = "";
-	    document.cookie = name+"="+value+expires+"; path=/";
-	}
-
-
 
 	function reloadPage() {
 	    location.reload(true);
@@ -63,7 +52,7 @@
 	    	image.src = "assets/images/hangman6.png";
 	    }
 	    return image;
-	};
+	}
 	
 	// Captures Key Clicks
 	document.onkeyup = function (event) {
@@ -177,11 +166,31 @@
 			document.getElementById('submit').style.display = 'block';
 		}
 		
-		if(numLettersMatched == currWord.length){
+		if(numLettersMatched == currWord.length && currWord == 'cat'){
+			var snd = new Audio('../../assets/sounds/cat.mp3'); 
+			snd.play();
 			document.querySelector('#next').innerHTML = 'Game over, you won!';
 			wins++;
 			document.querySelector('#numWin').innerHTML = wins;
-			document.getElementById('submit').style.display = 'block';
+			document.getElementById('submit').style.display = 'block';			
+		}
+
+		if(numLettersMatched == currWord.length && currWord == 'bear'){
+			var snd = new Audio('../../assets/sounds/bear.mp3');
+			snd.play();
+			document.querySelector('#next').innerHTML = 'Game over, you won!';
+			wins++;
+			document.querySelector('#numWin').innerHTML = wins;
+			document.getElementById('submit').style.display = 'block';			
+		}
+
+		if(numLettersMatched == currWord.length && currWord == 'tiger'){
+			var snd = new Audio('../../assets/sounds/tiger.mp3');
+			snd.play();
+			document.querySelector('#next').innerHTML = 'Game over, you won!';
+			wins++;
+			document.querySelector('#numWin').innerHTML = wins;
+			document.getElementById('submit').style.display = 'block';			
 		}
 		
 	};
